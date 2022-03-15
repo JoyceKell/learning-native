@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
-import Pai from '../components/indireta/Pai';
+import ContadorV2 from '../components/contador/ContadorV2';
+//import Pai from '../components/indireta/Pai';
 //import Pai from '../components/direta/Pai';
 //import Contador from '../components/Contador';
 //import Botao from '../components/Botao';
@@ -13,7 +14,7 @@ import Pai from '../components/indireta/Pai';
 const App = function () {
   return (
     <View style={style.App}>
-      <Pai />
+      <ContadorV2 />
     </View>
   );
 };
