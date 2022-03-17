@@ -1,7 +1,9 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
-import Pai from '../components/relacao/Pai';
-import Filho from '../components/relacao/Filho';
+import DigiteSeuNome from '../components/DigiteSeuNome';
+//import ListaProdutos from '../components/produtos/ListaProdutos';
+//import Pai from '../components/relacao/Pai';
+//import Filho from '../components/relacao/Filho';
 //import ParImpar from '../components/ParImpar';
 //import ContadorV2 from '../components/contador/ContadorV2';
 //import Pai from '../components/indireta/Pai';
@@ -17,13 +19,7 @@ import Filho from '../components/relacao/Filho';
 const App = function () {
   return (
     <View style={style.App}>
-      <Pai>
-        <Filho nome="Ana" sobrenome="Machado" />
-        <Filho nome="Joyce" sobrenome="Machado" />
-      </Pai>
-      <Pai>
-        <Filho nome="Carlos" sobrenome="Silva" />
-      </Pai>
+      <DigiteSeuNome />
     </View>
   );
 };
