@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
-import FlexboxV4 from '../components/layout/FlexboxV4';
+import Mega from '../components/mega/Mega';
+//import FlexboxV4 from '../components/layout/FlexboxV4';
 //import FlexboxV3 from '../components/layout/FlexboxV3';
 //import FlexboxV2 from '../components/layout/FlexboxV2';
 //import FlexboxV1 from '../components/layout/FlexboxV1';
@@ -23,7 +24,7 @@ import FlexboxV4 from '../components/layout/FlexboxV4';
 const App = function () {
   return (
     <View style={style.App}>
-      <FlexboxV4 />
+      <Mega qtdNum={7} />
     </View>
   );
 };
