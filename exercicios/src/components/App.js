@@ -1,6 +1,10 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
-import DigiteSeuNome from '../components/DigiteSeuNome';
+import FlexboxV4 from '../components/layout/FlexboxV4';
+//import FlexboxV3 from '../components/layout/FlexboxV3';
+//import FlexboxV2 from '../components/layout/FlexboxV2';
+//import FlexboxV1 from '../components/layout/FlexboxV1';
+//import DigiteSeuNome from '../components/DigiteSeuNome';
 //import ListaProdutos from '../components/produtos/ListaProdutos';
 //import Pai from '../components/relacao/Pai';
 //import Filho from '../components/relacao/Filho';
@@ -19,7 +23,7 @@ import DigiteSeuNome from '../components/DigiteSeuNome';
 const App = function () {
   return (
     <View style={style.App}>
-      <DigiteSeuNome />
+      <FlexboxV4 />
     </View>
   );
 };
