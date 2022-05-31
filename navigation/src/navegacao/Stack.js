@@ -23,9 +23,16 @@ export default props => (
         </PassoStack>
       )}
     </Stack.Screen>
+    <Stack.Screen name="TelaC" options={{title: 'Informações Iniciais'}}>
+      {props => (
+        <PassoStack {...props} avancar="TelaC" voltar avancar="TelaC">
+          <TelaC />
+        </PassoStack>
+      )}
+    </Stack.Screen>
     <Stack.Screen
       name="TelaC"
-      component={TelaC}
+      {...props}
       options={{title: 'Informações Iniciais'}}
     />
   </Stack.Navigator>

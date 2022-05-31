@@ -17,6 +17,16 @@ export default props => (
       ) : (
         false
       )}
+      {props.voltar ? (
+        <Button
+          title="Avancar"
+          onPress={() => {
+            props.navigation.push(props.avancar, props.avancarParam || null);
+          }}
+        />
+      ) : (
+        false
+      )}
     </View>
     <View style={{flex: 1}}>{props.children}</View>
   </View>
