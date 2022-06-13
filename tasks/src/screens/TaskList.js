@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, ImageBackground, StyleSheet} from 'react-native';
+import Task from '../components/Task';
 import moment from 'moment';
 import 'moment/locale/pt-br';
 import todayImage from '../../assets/imgs/today.jpg';
@@ -17,7 +18,12 @@ export default class TaskList extends Component {
           </View>
         </ImageBackground>
         <View style={styles.taskList}>
-          <Text>TaskList</Text>
+          <Task
+            desc={'Comprar livro'}
+            estimateAt={new Date()}
+            doneAt={new Date()}
+          />
+          <Task desc={'Comprar livro2'} estimateAt={new Date()} doneAt={null} />
         </View>
       </View>
     );
