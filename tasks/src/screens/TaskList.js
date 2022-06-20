@@ -7,6 +7,7 @@ import {
   FlatList,
   TouchableOpacity,
   Platform,
+  Alert,
 } from 'react-native';
 import Task from '../components/Task';
 import moment from 'moment';
@@ -45,6 +46,28 @@ export default class TaskList extends Component {
     this.setState({showDoneTasks: !this.state.showDoneTasks}, this.filterTasks);
   };
 
+  addTask = newTask => {
+    if (!newTask.desc || !newTask.desc.trim()) {
+      Alert.alert('Dados Inválidos', 'Descrição não informada');
+      return;
+    }
+    const tasks = [...this.state.tasks];
+    tasks.push({
+      id: Math.random(),
+      desc: newTask.desc,
+      estimateAt: newTask.date,
+      doneAt: null,
+    });
+
+    this.setState(
+      {
+        tasks,
+        showAddTask: false,
+      },
+      this.filterTasks,
+    );
+  };
+
   filterTasks = () => {
     let visibleTasks = null;
     if (this.state.showDoneTasks) {
@@ -74,6 +97,7 @@ export default class TaskList extends Component {
         <AddTask
           isVisible={this.state.showAddTask}
           onCancel={() => this.setState({showAddTask: false})}
+          onSave={this.addTask}
         />
         <ImageBackground source={todayImage} style={styles.background}>
           <View style={styles.iconBar}>
